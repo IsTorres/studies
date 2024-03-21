@@ -16,6 +16,13 @@ export default function Home() {
         Descartar o que é superfluo, ostentavel e exagerado. Dar protagonismo às
         coisas simples e aproveita-las ao máximo.
       </p>
+
+      <div>
+        <h2>Status pages</h2>
+        <a href="https://www.vercel-status.com/">Vercel</a>
+        <a href="https://health.aws.amazon.com/health/status">AWS</a>
+        <a href="https://www.githubstatus.com/">Github</a>
+      </div>
     </>
   );
 }

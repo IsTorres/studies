@@ -1,5 +1,5 @@
-test('api/v1/stauts shold be 200', async () => {
-    const res = await fetch('http://localhost:3000/api/v1/status')
+test("api/v1/stauts shold be 200", async () => {
+  const res = await fetch("http://localhost:3000/api/v1/status");
 
-    expect(res.status).toBe(200);
-})
+  expect(res.status).toBe(200);
+});

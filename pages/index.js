@@ -6,12 +6,10 @@ export default function Home() {
         O primeiro passo, o minimo, o plano mais simples para sair do lugar e se
         organizar.
       </p>
-      <br />
       <p>
         Essa é a ideia aqui. Ir, um passinho de cada vez rumo a organização e
         produtividade.
       </p>
-      <br />
       <p>
         Descartar o que é superfluo, ostentavel e exagerado. Dar protagonismo às
         coisas simples e aproveita-las ao máximo.
@@ -19,9 +17,17 @@ export default function Home() {
 
       <div>
         <h2>Status pages</h2>
-        <a href="https://www.vercel-status.com/">Vercel</a>
-        <a href="https://health.aws.amazon.com/health/status">AWS</a>
-        <a href="https://www.githubstatus.com/">Github</a>
+        <ul>
+          <li>
+            <a href="https://www.vercel-status.com/">Vercel</a>
+          </li>
+          <li>
+            <a href="https://health.aws.amazon.com/health/status">AWS</a>
+          </li>
+          <li>
+            <a href="https://www.githubstatus.com/">Github</a>
+          </li>
+        </ul>
       </div>
     </>
   );

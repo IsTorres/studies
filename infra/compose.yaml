@@ -1,7 +1,9 @@
 services:
   database:
+    # o postgres citado antes do : é o nome do repositorio do docker hub onde a imagem tá
     image: "postgres:16.0-alpine3.18"
-    environment:
-      POSTGRES_PASSWORD: "password"
+    env_file:
+      - ../.env.local
     ports:
+      # host:container
       - "5432:5432"

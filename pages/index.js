@@ -11,7 +11,7 @@ export default function Home() {
         produtividade.
       </p>
       <p>
-        Descartar o que é superfluo, ostentavel e exagerado. Dar protagonismo às
+        Descartar o que é supérfluo, ostentavel e exagerado. Dar protagonismo às
         coisas simples e aproveita-las ao máximo.
       </p>
 

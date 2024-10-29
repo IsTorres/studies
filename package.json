@@ -7,6 +7,7 @@
     "dev": "next dev",
     "server:up": "docker compose -f infra/compose.yaml up -d",
     "server:down": "docker compose -f infra/compose.yaml down",
+    "server:stop": "docker compose -f infra/compose.yaml stop",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",

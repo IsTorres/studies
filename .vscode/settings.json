@@ -1,0 +1,5 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "docker.languageserver.diagnostics.instructionJSONInSingleQuotes": "ignore",
+    "workbench.settings.editor": "json"
+}

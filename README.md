@@ -16,7 +16,7 @@ Para usuários do Docker Desktop, verifique se a integração com o WSL está ha
 
 Caso o Docker Desktop não esteja em uso, inicie o daemon manualmente usando o comando:
 
-``` sudo dockerd & ```
+``` sudo dockerd ```
 
 Esse comando iniciará o Docker diretamente, sem depender do systemctl, e permitirá o uso do docker compose up para levantar os containers.
 

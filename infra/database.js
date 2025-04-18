@@ -15,11 +15,12 @@ import { Client } from "pg";
     return result;
   } catch (error) {
     console.log(error);
+    throw error;
   } finally {
     await client.end();
   }
 }
 
 export default {
-  query: query,
+  query
 }

@@ -2,7 +2,9 @@ export default function Home() {
   return (
     <>
       <h1>LowPlan</h1>
-      <p>
+
+      <p>Pensando em mudar o nome do projeto...</p>
+      {/* <p>
         O primeiro passo, o minimo, o plano mais simples para sair do lugar e se
         organizar.
       </p>
@@ -13,7 +15,7 @@ export default function Home() {
       <p>
         Descartar o que é supérfluo, ostentavel e exagerado. Dar protagonismo às
         coisas simples e aproveita-las ao máximo.
-      </p>
+      </p> */}
 
       <div>
         <h2>Status pages</h2>

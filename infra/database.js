@@ -7,7 +7,7 @@ async function query(queryObject) {
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
     port: process.env.POSTGRES_PORT,
-    ssl: process.env.NODE_ENV === "production"
+    ssl: getSSLValues(),
   });
 
   console.log({
@@ -33,3 +33,13 @@ async function query(queryObject) {
 export default {
   query,
 };
+
+function getSSLValues() {
+  if (process.env.POSTGRESS_CA) {
+    return {
+      ca: process.env.POSTGRESS_CA,
+    };
+  }
+
+  return process.env.NODE_ENV === "production";
+}

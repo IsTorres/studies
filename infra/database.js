@@ -27,9 +27,9 @@ export default {
 };
 
 function getSSLValues() {
-  if (process.env.POSTGRESS_CA) {
+  if (process.env.POSTGRES_CA) {
     return {
-      ca: process.env.POSTGRESS_CA,
+      ca: process.env.POSTGRES_CA,
     };
   }
 

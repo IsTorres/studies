@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run server:up && next dev",
-    "server:up": "(pgrep dockerd || sudo dockerd &) && docker compose -f infra/compose.yaml up -d",
+    "server:up": "docker compose -f infra/compose.yaml up -d",
     "server:down": "docker compose -f infra/compose.yaml down",
     "server:stop": "docker compose -f infra/compose.yaml stop",
     "lint:check": "prettier --check .",

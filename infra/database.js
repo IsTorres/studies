@@ -1,26 +1,33 @@
-import { Client } from "pg";
+import { Client, Pool } from "pg";
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  }
+});
 
 async function query(queryObject) {
-  const client = new Client({
-    host: process.env.POSTGRES_HOST,
-    user: process.env.POSTGRES_USER,
-    database: process.env.POSTGRES_DB,
-    password: process.env.POSTGRES_PASSWORD,
-    port: process.env.POSTGRES_PORT,
-    // ssl: getSSLValues(),
-    ssl: process.env.NODE_ENV === "development" ? false : true,
-  });
+  // const client = new Client({
+  //   host: process.env.POSTGRES_HOST,
+  //   user: process.env.POSTGRES_USER,
+  //   database: process.env.POSTGRES_DB,
+  //   password: process.env.POSTGRES_PASSWORD,
+  //   port: process.env.POSTGRES_PORT,
+  //   ssl: getSSLValues(),
+  // });
 
   try {
-    await client.connect();
-    const result = await client.query(queryObject);
+    await pool.connect();
+    const result = await pool.query(queryObject);
     return result;
   } catch (error) {
-    console.log(error);
+    console.error("Erro ao executar query:", error);
     throw error;
-  } finally {
-    await client.end();
-  }
+  } 
+  // finally {
+  //   await client.end();
+  // }
 }
 
 export default {
